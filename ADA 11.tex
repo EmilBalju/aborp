@@ -1,0 +1,327 @@
+\documentclass[12pt,spanish]{homework}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumerate} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[spanish,mexico]{babel}
+\inputencoding{latin1}
+
+\title{Actividad de Aprendizaje 11}
+\author{Emilio Balan,Amilcar Campos, Elian Carrasco, Citlali Gutiérrez, Héctor Rodríguez}
+\date{20 de noviembre del 2020}
+\institute{Universidad Autónoma de Yucatán \\ Facultad de Matemáticas - UADY}
+\class{Probabilidad 1 (Grupo B)}
+\professor{Lic. Ernesto Guerrero Lara}
+
+\begin{document}
+
+\maketitle
+
+\section*{Ejercicio 1}
+\begin{center}
+De un grupo de 40 personas de edad 70, 20 de ellos fallecieron antes de cumplir 72 y de los cuales 15 antes de cumplir 71. Sea $X_{y}$ la variable que indica si una persona de edad 70 fallece antes de edad $y$. Calcula:
+\end{center}
+\begin{problem}
+a) $P(X_{71})= 1$
+\end{problem}
+\subsection*{Solución}
+Decimos que \textbf{$X = 1$} cuando el resultado es "éxito", por lo que estamos buscando la probabilidad de que la persona fallezca antes de los 71. Por lo que:
+$$P(X_{71} = 1) = p = \dfrac{15}{40} = \dfrac{3}{8}$$
+\begin{problem}
+b) $P(X_{72})= 0$
+\end{problem}
+\subsection*{Solución}
+Decimos que \textbf{$X = 0$} cuando el resultado es "no éxito", por lo que estamos buscando la probabilidad de que la persona no fallezca antes de los 72. Por lo que:
+$$P(X_{72} = 0) = 1 - p = 1 - \dfrac{20}{40} = \dfrac{1}{2}$$
+\begin{problem}
+c) $E[X_{71}]$ y $Var(X_{71})$
+\end{problem}
+\subsection*{Solución}
+Por información previa de varible Bernoulli, sabemos que la esperanza de esta, es igual a:
+$$E[X]= p$$
+Y por el inciso a, ya conocemos el valor de p, por lo que:
+$$E[X_{71}] = \dfrac{3}{8}$$
+De igual forma sabemos que la varianza se calcula:
+$$Var(X) = p(1-p)$$
+Así que la varianza nos queda:
+$$Var(X_{71}) = (\dfrac{3}{8}) \cdot (1 - \dfrac{3}{8}) = \dfrac{15}{64}$$
+\section*{Ejercicio 4}
+\begin{center}
+El 40\% de una población apoya al candidato A. Se seleccionan al azar 5 electores. Calcula:
+\end{center}
+
+\begin{problem}
+a) La probabilidad de que la mayoría vote por el candidato A.
+\end{problem}
+\subsection*{Solución}
+El problema nos piden la probabilidad de que los 5 electores seleccionados al azar, 3 o más de ellos voten por el candidato A, es decir $P(X \geq 3)$, es decir:
+$$P(X \geq 3) = P(X = 3) + P(X =4) + P(X = 5)$$
+Para sacar esta probabilidad vamos a recurrir a las variables binomiales, y sabemos que la probabilidad de estas variables se calcula mediante:
+$$\displaystyle\binom{n}{x} p^x q^{n-x}$$
+Ahora bien definimos nuestras variables para este experimento:\\
+$n = 5$ (es el total de la muestra que tenemos.)\\
+$x = 3, 4 ,5$ (Número de electores que voten por el candidato A.)\\ 
+$p = 0.40$ (Probabilidad de que los electores voten por el candidato A.)\\
+$q = 0.60$ (Probabilidad de que los electores no voten por el candidato A.)\\
+Tras sustituir en todas nuestras variables, simplemente sustituimos en la formula:
+$$P(X \geq 3) = \displaystyle\binom{5}{3} (0.4)^{3} (0.6)^2 + \displaystyle\binom{5}{4} (0.4)^{4} (0.6)^1 + \displaystyle\binom{5}{5} (0.4)^{5} (0.6)^0 = \dfrac{992}{3125} $$
+
+\begin{problem}
+b) La probabilidad de que la mayoría no vote por el candidato A.
+\end{problem}
+\subsubsection*{Solución}
+Esto lo podríamos ver como la probabilidad de que los 5 electores seleccionados al azar, 2 o menos de ellos voten por el candidato A, es decir $P(X \leq 2)$, esto lo podríamos ver como:
+$$P(X \leq 2) = 1 - P(X > 2) $$
+Esto lo podríamos ver cómo:
+$$P(X \leq 2)= 1 - [P(X=3) + P(X=4)+P(X=5)]$$
+Como ya conocemos la probabilidad de $P(X=3) + P(X=4)+P(X=5)$, esto nos quedaría:
+$$P(X \leq 2) = 1 - \dfrac{992}{3125} = \dfrac{2133}{3125}$$
+
+\begin{problem}
+c) El número esperado de votos que recibirá el candidato A
+\end{problem}
+\subsection*{Solución}
+Sabemos que la esperanza para la variable aleatoria binomial es:
+$$E[X] = np$$
+Donde: \\
+$n = 5$\\
+$p = 0.40$\\
+Por lo que la esperanza nos queda:
+$$E[X] = 5(0.4) = 2$$
+\newpage
+\begin{problem}
+d) La varianza del número esperado de votos que recibirá el candidato A.
+\end{problem}
+\subsection*{Solución}
+Sabemos que la varianza para la variable aleatoria binomial es:
+$$Var(X) = npq$$
+Donde: \\
+$n = 5$\\
+$p = 0.40$\\
+$q = 0.60$\\
+Por lo que la esperanza nos queda:
+$$Var(X) = 5(0.4)(0.6) = \dfrac{6}{5} = 1.2$$
+
+
+\section*{Ejercicio 8}
+\begin{center}
+El 30\% de los solicitantes de empleo están capacitados para el empleo. Calcula:
+Calcula:
+\end{center}
+
+\begin{problem}
+a) La probabilidad de que el trabajo sea cubierto con el tercer solicitante.
+\end{problem}
+\subsection*{Solución}
+Para sacar esta probabilidad, vamos a recurrir a la variable geométrica, y la probabilidad de esta se calcula:
+$$P(X = x) = p(1 - p)^{x}$$
+Ahora definimos nuestras variables:\\
+$p = 0.30$ (Probabilidad de que  un solicitante este capacitado para el empleo.)\\
+$x = 2$ (Número de solicitantes que no estaban capacitados para el empleo.)\\
+Por lo que nuestra probabilidad nos quedaría como:
+$$P(X = 2) = (0.30)(0.70)^{2} = \dfrac{147}{1000}$$
+
+\begin{problem}
+b) La probabilidad de que se requiera más de dos entrevistas para cubrir el puesto.
+\end{problem}
+\subsection*{Solución}
+La probabilidad que nos pide el inciso es $P(X > 1)$, esto lo podríamos ver como:
+$$P(X > 1) = 1 - P(X \leq 1) = 1 - [P(X = 1) + P(X=0)]$$
+Ahora definimos nuestras variables:\\
+$p = 0.30$ (Probabilidad de que  un solicitante este capacitado para el empleo.)\\
+$x = 0,1$ (Número de solicitantes que no estaban capacitados para el empleo.)\\
+Así que la probabilidad sería igual a:
+$$P(X > 1) = 1 - P(X \leq 1) = 1 - [(0.3)(0.7)^1 + (0.3)(0.7)^0] = \dfrac{49}{100}$$
+\newpage
+\begin{problem} 
+c) El número esperado de entrevistas para ocupar el puesto.
+\end{problem}
+\subsection*{Solución}
+Sabemos que la esperanza para una variable geométrica es:
+$$E[X] = \dfrac{1 - p}{p}$$
+En nuestro caso $P = 0.30$, así que la esperanza es:
+$$E[X] = \dfrac{1 - 0.30}{0.30} = \dfrac{7}{3}$$
+\begin{problem}
+d) La varianza del número esperado de entrevistas realizadas.
+\end{problem}
+\subsection*{Solución}
+Sabemos que la varianza para una variable geométrica es:
+$$Var(X) = \dfrac{1 - p}{p^2}$$
+En nuestro caso $P = 0.30$, así que la varianza es:
+$$E[X] = \dfrac{1 - 0.30}{(0.30)^2} = \dfrac{70}{9}$$
+
+
+
+\section*{Ejercicio 11}
+\begin{center}
+Se somete a los empleados de una empresa que fabrica material aislante a un análisis para
+detectar indicios de asbesto en los pulmones. Cuando se han detectado tres trabajadores con
+indicios de asbesto se envían al hospital. Si el 40\% de los trabajadores muestran indicios
+asbesto en los pulmones, calcula:
+\end{center}
+\begin{problem}
+a) La probabilidad de que se tengan que examinar a diez trabajadores para enviar al primer
+grupo al hospital.
+\end{problem}
+\subsection*{Solución}
+Para sacar esta probabilidad vamos a recurrir a la variable binomial negativa, y la probabilidad de esta se calcula:
+$$P(X = x)=\displaystyle\binom{r + x - 1}{x} p^r (1 - p)^x$$
+Ahora definimos nuestras variables:\\
+$p = 0.40$ (Probabilidad de que un trabajador sea detectado con indicios de asbesto en los pulmones.)\\
+$r = 3$ (Número de trabajadoreres con indicios de asbesto en los pulmones)\\
+$x = 7$ (Número de trabajadores que no mostraron indicios de asbesto en los pulmones antes de encontrar al tercer trabajador con asbesto en los pulmones.)\\
+Por lo que nuestra probabilidad nos queda cómo:
+$$P(X = 7) = \displaystyle\binom{9}{7} (0.4)^3 (0.6)^7 \approx 0.0644972544$$
+
+\newpage
+\begin{problem}
+b) La probabilidad de que se tenga que examinar más de cuatro trabajadores para enviar al grupo al hospital.
+\end{problem}
+\subsection*{Solución}
+La probabilidad que nos piden es $P(X > 1)$, esta probabilidad la pudieramos ver cómo:
+$$P(X > 1) = 1 - P(X \leq 1) = 1 - [P(X = 1) + P(X = 0)]$$
+Ahora definimos nuestras variables:\\
+$p = 0.40$\\
+$r = 3$\\
+$x = 0,1$\\
+Así que nuestra probabilidad nos queda:
+$$P(X > 1) = 1 - [\displaystyle\binom{3}{1} (0.4)^3 (0.6)^1 + \displaystyle\binom{2}{0} (0.4)^3 (0.6)^0] = \dfrac{513}{625}$$
+\begin{problem}
+c) El número esperado y la varianza del número de trabajadores a examinar para enviar al primer grupo al hospital.
+\end{problem}
+\subsection*{Solución}
+Sabemos que la esperanza para una variable binomial negativa se calcula:
+$$E[X] = r(\dfrac{1-p}{p})$$
+Ahora definimos nuestras variables:\\
+$p = 0.40$\\
+$r = 3$\\
+Así que nuestra esperanza es:
+$$E[X] = 3(\dfrac{0.6}{0.4}) = \dfrac{9}{2}$$
+Sabemos que la varianza para una variable binomial negativa se calcula:
+$$Var(X) = r(\dfrac{1-p}{p^2})$$
+Ahora definimos nuestras variables:\\
+$p = 0.40$\\
+$r = 3$\\
+Así que nuestra varianza es:
+$$Var(X) = 3(\dfrac{0.6}{0.4^2}) = \dfrac{45}{4}$$
+
+\newpage
+\section*{Ejercicio 13}
+\begin{center}
+Un producto industrial se envía en lotes de 20 artículos. Un plan de muestreo requiere que
+se muestreen 5 artículos de cada lote. El lote es rechazado si se encuentra más de un artículo
+defectuoso. Se sabe que en cada lote se tienen en promedio cuatro artículos defectuosos. Calcula:
+\end{center}
+\begin{problem}
+a) La probabilidad de que el lote sea rechazado.
+\end{problem}
+\subsection*{Solución}
+El inciso nos pide la probabilidad de que la muestra de cinco artículos haya más de un artículo defectuoso, para calcular esta probabilidad vamos a recurrir a las variables hipergeométricas, y su probabilidad de esta son:
+$$P(X = x) \dfrac{\displaystyle\binom{K}{x} \displaystyle\binom{N - K}{n - x}}{\displaystyle\binom{N}{n}}$$
+Así que la probabilidad de que estamos buscando la podríamos ver cómo:
+$$P ( X \geq 2)= P(X = 2) + P(X = 3) + P(X =4)$$
+Ahora definimos nuestras variables:\\
+$N = 20$ (Número total de artículos.)\\
+$K = 4$ (Número de artículos defectuosos)\\
+$n = 5$ (Tamaño del muestreo)\\
+$x = 2 , 3 ,4$ (Número de artículos defectuosos de la muestra.)\\
+Así que nuestra probabilidad nos quedaría:
+$$P ( X \geq 2)=\dfrac{\displaystyle\binom{4}{2} \displaystyle\binom{16}{3}}{\displaystyle\binom{20}{5}} + \dfrac{\displaystyle\binom{4}{3} \displaystyle\binom{16}{2}}{\displaystyle\binom{20}{5}} + \dfrac{\displaystyle\binom{4}{4} \displaystyle\binom{16}{1}}{\displaystyle\binom{20}{5}} = \dfrac{241}{969} $$
+\begin{problem}
+b) El número esperado y la varianza del número de artículos defectuosos en una muestra de  tamaño 5.
+\end{problem}
+\subsection*{Solución}
+Sabemos que el número esperado se refiere a la esperanza, y para calcular la esperanza de una variable hipergeométrica es mediante:
+$$E[X] = n \dfrac{K}{N}$$ 
+Ahora definimos nuestras variables:\\
+$N = 20$\\
+$K = 4$\\
+$n = 5$\\
+Así que nuestro número esperado de artículos defectuosos en una muestra de tamaño 5 es:
+$$E[X] = 5 \dfrac{4}{20} = 1$$
+
+De igual forma, para calcular la varianza sabemos que es mediante:
+$$Var(X) = n \dfrac{K}{N} \dfrac{N-K}{N}  \dfrac{N - n}{N - 1}$$ 
+Ahora definimos nuestras variables:\\
+$N = 20$\\
+$K = 4$\\
+$n = 5$\\
+Así que nuestro varianza del número de artículos defectuosos en una muestra de tamaño 5 es:
+$$Var(X) = 5 \dfrac{4}{20} \dfrac{16}{20}  \dfrac{15}{19} = \dfrac{12}{19}$$
+\begin{problem}
+c) La probabilidad de que el lote sea rechazado si la muestra es de tamaño 6.
+\end{problem}
+\subsection*{Solución}
+Este problema se soluciona como en el primer caso, pero aquí cambia nuestro valor de $n$.
+De igual forma la probabilidad de que estamos buscando es:
+$$P ( X \geq 2)= P(X = 2) + P(X = 3) + P(X =4)$$
+Definimos nuestras variables:\\
+$N = 20$\\
+$K = 4$\\
+$n = 6$\\
+$x = 2 , 3 ,4$\\
+Así que nuestra probabilidad nos quedaría:
+$$P ( X \geq 2)=\dfrac{\displaystyle\binom{4}{2} \displaystyle\binom{16}{4}}{\displaystyle\binom{20}{6}} + \dfrac{\displaystyle\binom{4}{3} \displaystyle\binom{16}{3}}{\displaystyle\binom{20}{6}} + \dfrac{\displaystyle\binom{4}{4} \displaystyle\binom{16}{2}}{\displaystyle\binom{20}{6}} = \dfrac{332}{969} $$
+
+\section*{Ejercicio 16}
+\begin{center}
+Una empresario desea modelar con una variable Poisson al número de clientes que visita su
+tienda. Se sabe que la probabilidad de que no hayan visitas en una hora es 0.08. Calcula:
+\end{center}
+\begin{problem}
+a) El valor de $\lambda$.
+\end{problem}
+\subsubsection*{Solución}
+Definimos $x = 0$ como el número de clientes que visita la tienda en una hora. Así que:
+$$P(X = 0) = \dfrac{e^{-\lambda} \cdot \lambda^0}{0!} = 0.08$$
+Cómo sabemos que $0! = 1$ y que cualquier número elevado a la 0 es 1, nos queda que:
+$$P(X = 0) = e^{-\lambda} = 0.08$$
+De aquí podemos calcular el logaritmo natural, para buscar el valor de $\lambda$, así que:
+$$-\lambda = ln(0.08) \Rightarrow \lambda = - ln(0.08)$$
+\newpage
+\begin{problem}
+b) La probabilidad de que se tengan cuando mucho dos visitas en una hora.
+\end{problem}
+\subsubsection*{Solución}
+La probabilidad que nos piden es la siguiente:
+$$P(X \leq 2) = P(X =2) + P(X = 1) + P(X = 0 )$$
+Esto lo podemos ver:
+$$P ( X \leq 2) = \dfrac{e^{ln(0.08)} \cdot (-ln(0.08))^2}{2!} + \dfrac{e^{ln(0.08)} \cdot (-ln(0.08))^1}{1!} + \dfrac{e^{ln(0.08)} \cdot (-ln(0.08))^0}{0!} \approx 0.593$$
+\begin{problem}
+c) La probabilidad de que en cinco horas hayan visitado más de tres personas.
+\end{problem}
+\subsubsection*{Solución}
+$$X \sim Poisson (-5ln(0.08))$$
+La probabilidad que nos piden es $P(X > 3)$, esto lo podríamos ver cómo:
+$$P(X > 3) = 1 - P(X \leq 3)$$
+Esto lo podríamos ver cómo:
+$$P(X > 3) = 1 - [P(X =3) + P(X = 2) + P(X =1) + P(X = 0)]$$
+Y como sabemos que la probabilidad de una variable Poisson se calcula mediante:
+$$P(X = x) = \dfrac{e^{-\lambda} \cdot \lambda^x}{x!}$$
+Así que nuestra probabilidad nos quedaría:\\
+$P(X > 3) = 1 - [ \dfrac{e^{ln(0.08)} \cdot -5ln(0.08)^3}{3!} +  \dfrac{e^{ln(0.08)} \cdot  -5ln(0.08)^2}{2!}+ \dfrac{e^{ln(0.08)} \cdot  -5ln(0.08)^1}{1!} + \dfrac{e^{ln(0.08)} \cdot  -5ln(0.08)^0}{0!}]$\\
+Esto es igual a:
+$$P(X > 3) \approx 0.9999832642$$
+\begin{problem}
+d)El número esperado y la varianza del número de visitas en una jornada de 8 horas.
+\end{problem}
+\subsubsection*{Solución}
+Sabemos que la esperanza de una variable de Poisson se calcula mediante:
+$$E[X] = \lambda$$
+Para una hora sería:
+$$E[X] = -ln(0.08)$$
+Pero para 8 horas sería:
+$$E[X] = -8 ln(0.08)$$
+
+En el caso de la varianza de una variable de Poisson se calcula mediante:
+$$Var(X) = \lambda$$
+Para una hora sería:
+$$Var(X) = -ln(0.08)$$
+Pero para 8 horas sería:
+$$Var(X) = -8 ln(0.08)$$ 
+\end{document}
