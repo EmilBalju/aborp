@@ -59,7 +59,7 @@ El 40\% de una población apoya al candidato A. Se seleccionan al azar 5 electore
 a) La probabilidad de que la mayoría vote por el candidato A.
 \end{problem}
 \subsection*{Solución}
-El problema nos piden la probabilidad de que los 5 electores seleccionados al azar, 3 o más de ellos voten por el candidato A, es decir $P(X \geq 3)$, es decir:
+El problema nos piden la probabilidad de que los 5 electores seleccionados al azar, 3 o más de ellos voten por el candidato A, es decir $P(X \geq 3)$, esto es igual a:
 $$P(X \geq 3) = P(X = 3) + P(X =4) + P(X = 5)$$
 Para sacar esta probabilidad vamos a recurrir a las variables binomiales, y sabemos que la probabilidad de estas variables se calcula mediante:
 $$\displaystyle\binom{n}{x} p^x q^{n-x}$$
@@ -68,14 +68,14 @@ $n = 5$ (es el total de la muestra que tenemos.)\\
 $x = 3, 4 ,5$ (Número de electores que voten por el candidato A.)\\ 
 $p = 0.40$ (Probabilidad de que los electores voten por el candidato A.)\\
 $q = 0.60$ (Probabilidad de que los electores no voten por el candidato A.)\\
-Tras sustituir en todas nuestras variables, simplemente sustituimos en la formula:
+Tras definir nuestras variables, ahora lo que hacemos es simplemente sustituir en nuestra formula:
 $$P(X \geq 3) = \displaystyle\binom{5}{3} (0.4)^{3} (0.6)^2 + \displaystyle\binom{5}{4} (0.4)^{4} (0.6)^1 + \displaystyle\binom{5}{5} (0.4)^{5} (0.6)^0 = \dfrac{992}{3125} $$
 
 \begin{problem}
 b) La probabilidad de que la mayoría no vote por el candidato A.
 \end{problem}
 \subsubsection*{Solución}
-Esto lo podríamos ver como la probabilidad de que los 5 electores seleccionados al azar, 2 o menos de ellos voten por el candidato A, es decir $P(X \leq 2)$, esto lo podríamos ver como:
+Esto lo podríamos ver como la probabilidad de que los 5 electores seleccionados al azar, 2 o menos de ellos voten por el candidato A, es decir $P(X \leq 2)$, y esto es igual a:
 $$P(X \leq 2) = 1 - P(X > 2) $$
 Esto lo podríamos ver cómo:
 $$P(X \leq 2)= 1 - [P(X=3) + P(X=4)+P(X=5)]$$
@@ -111,7 +111,6 @@ $$Var(X) = 5(0.4)(0.6) = \dfrac{6}{5} = 1.2$$
 \section*{Ejercicio 8}
 \begin{center}
 El 30\% de los solicitantes de empleo están capacitados para el empleo. Calcula:
-Calcula:
 \end{center}
 
 \begin{problem}
