@@ -30,14 +30,17 @@ De un grupo de 40 personas de edad 70, 20 de ellos fallecieron antes de cumplir 
 a) $P(X_{71}= 1)$
 \end{problem}
 \subsection*{Solución}
-Para una variable Bernoulli decimos que \textbf{$X = 1$} cuando el resultado es "éxito", por lo que estamos buscando la probabilidad de que la persona fallezca antes de los 71. Por lo que:
+Para este problema existe  dos sucesos que pueden suceder, que la persona haya fallecido antes de cumplir 71 o que hubiese fallecido despues de cumplir 71, como en este caso buscamos la probabailidad de que la persona haya fallecido antes de los 71, podemos decir que si $X = 1$ será nuestro "éxito", por lo que estaríamos buscando la probabilidad de una variable Bernoulli.\\
+Para una variable Bernoulli decimos que \textbf{$X = 1$} cuando el resultado es  nuestro "éxito", por lo como hemos mencionado anteriormente, estamos buscando la probabilidad de que la persona haya fallecido antes de los 71. Por lo que:
 $$P(X_{71} = 1) = p = \dfrac{15}{40} = \dfrac{3}{8}$$
 \begin{problem}
 b) $P(X_{72}= 0)$
 \end{problem}
 \subsection*{Solución}
+Para este problema existe  dos sucesos que pueden suceder, que la persona haya fallecido antes de cumplir 72 o que hubiese fallecido despues de cumplir 72, como en este caso buscamos la probabailidad de que la persona no haya fallecido antes de los 72, podemos decir que si $X = 0$ será nuestro "no éxito", por lo que estaríamos buscando la probabilidad de una variable Bernoulli.\\
 Para una variable Bernoulli decimos que \textbf{$X = 0$} cuando el resultado es "no éxito", por lo que estamos buscando la probabilidad de que la persona no fallezca antes de los 72. Por lo que:
 $$P(X_{72} = 0) = 1 - p = 1 - \dfrac{20}{40} = \dfrac{1}{2}$$
+\newpage
 \begin{problem}
 c) $E[X_{71}]$ y $Var(X_{71})$
 \end{problem}
@@ -45,7 +48,7 @@ c) $E[X_{71}]$ y $Var(X_{71})$
 Por información previa de varible Bernoulli, sabemos que la esperanza de esta, es igual a:
 $$E[X]= p$$
 Y por el inciso a, ya conocemos el valor de p, por lo que:
-$$E[X_{71}] = \dfrac{3}{8}$$
+$$E[X_{71}] =\dfrac{15}{40} =\dfrac{3}{8}$$
 De igual forma sabemos que la varianza se calcula:
 $$Var(X) = p(1-p)$$
 Así que la varianza nos queda:
@@ -59,7 +62,8 @@ El 40\% de una población apoya al candidato A. Se seleccionan al azar 5 electore
 a) La probabilidad de que la mayoría vote por el candidato A.
 \end{problem}
 \subsection*{Solución}
-El problema nos piden la probabilidad de que los 5 electores seleccionados al azar, 3 o más de ellos voten por el candidato A, es decir $P(X \geq 3)$, esto es igual a:
+Podemos definir en este problema dos sucesos, que el elector vote por el candidato A, que para este caso sera nuestro "éxito", o que el elector no vote por el candidato A, nuestro "no éxito",como el problema nos piden la probabilidad de que los 5 electores seleccionados al azar la mayoría vote por el candidato A, es decir que 3 o más de ellos voten por el candidato A, podemos ver que nuestra distribución de probabilidad se ajustaría a una distribución binomial, ya que tenemos un número finito de pruebas (nuestro 5 electores) y en cada experimento solo es posible dos resultados.\\
+La probabilidad que nos pide el problema es $P(X \geq 3)$, esto es igual a:
 $$P(X \geq 3) = P(X = 3) + P(X =4) + P(X = 5)$$
 Para sacar esta probabilidad vamos a recurrir a las variables binomiales, y sabemos que la probabilidad de estas variables se calcula mediante:
 $$\displaystyle\binom{n}{x} p^x q^{n-x}$$
@@ -70,12 +74,13 @@ $p = 0.40$ (Probabilidad de que los electores voten por el candidato A.)\\
 $q = 0.60$ (Probabilidad de que los electores no voten por el candidato A.)\\
 Tras definir nuestras variables, ahora lo que hacemos es simplemente sustituir en nuestra formula:
 $$P(X \geq 3) = \displaystyle\binom{5}{3} (0.4)^{3} (0.6)^2 + \displaystyle\binom{5}{4} (0.4)^{4} (0.6)^1 + \displaystyle\binom{5}{5} (0.4)^{5} (0.6)^0 = \dfrac{992}{3125} $$
-
+\newpage
 \begin{problem}
 b) La probabilidad de que la mayoría no vote por el candidato A.
 \end{problem}
 \subsubsection*{Solución}
-Esto lo podríamos ver como la probabilidad de que los 5 electores seleccionados al azar, 2 o menos de ellos voten por el candidato A, es decir $P(X \leq 2)$, y esto es igual a:
+Podemos definir en este problema dos sucesos, que el elector vote por el candidato A, que para este caso sera nuestro "éxito", o que el elector no vote por el candidato A, nuestro "no éxito",como el problema nos piden la probabilidad de que los 5 electores seleccionados al azar la mayoría no vote por el candidato A, es decir que 2 o menos de ellos voten por el candidato A, podemos ver que nuestra distribución de probabilidad se ajustaría a una distribución binomial, ya que tenemos un número finito de pruebas (nuestro 5 electores) y en cada experimento solo es posible dos resultados.\\
+Cómo estamos buscando laprobabilidad de que 2 o menos electores voten por el candidato A,es decir lo podríamos ver como $P(X \leq 2)$, y esto a la vez es igual a:
 $$P(X \leq 2) = 1 - P(X > 2) $$
 Esto lo podríamos ver cómo:
 $$P(X \leq 2)= 1 - [P(X=3) + P(X=4)+P(X=5)]$$
@@ -86,19 +91,18 @@ $$P(X \leq 2) = 1 - \dfrac{992}{3125} = \dfrac{2133}{3125}$$
 c) El número esperado de votos que recibirá el candidato A
 \end{problem}
 \subsection*{Solución}
-Sabemos que la esperanza para la variable aleatoria binomial es:
+Sabemos que la esperanza para la variable binomial es:
 $$E[X] = np$$
 Donde: \\
 $n = 5$\\
 $p = 0.40$\\
 Por lo que la esperanza nos queda:
 $$E[X] = 5(0.4) = 2$$
-\newpage
 \begin{problem}
 d) La varianza del número esperado de votos que recibirá el candidato A.
 \end{problem}
 \subsection*{Solución}
-Sabemos que la varianza para la variable aleatoria binomial es:
+Sabemos que la varianza para la variable  binomial es:
 $$Var(X) = npq$$
 Donde: \\
 $n = 5$\\
@@ -106,8 +110,7 @@ $p = 0.40$\\
 $q = 0.60$\\
 Por lo que la esperanza nos queda:
 $$Var(X) = 5(0.4)(0.6) = \dfrac{6}{5} = 1.2$$
-
-
+\newpage
 \section*{Ejercicio 8}
 \begin{center}
 El 30\% de los solicitantes de empleo están capacitados para el empleo. Calcula:
@@ -117,7 +120,8 @@ El 30\% de los solicitantes de empleo están capacitados para el empleo. Calcula:
 a) La probabilidad de que el trabajo sea cubierto con el tercer solicitante.
 \end{problem}
 \subsection*{Solución}
-Para sacar esta probabilidad, vamos a recurrir a la variable geométrica, y la probabilidad de esta se calcula:
+
+En este problema podemos ver que nos piden la probabilidad de que el trabajo sea cubierto con el tercer solicitante, es decir nos piden la probabilidad de que el proceso se repita 3 veces hasta obtener nuestro resultado deseado, en este caso nuestro "éxito" es que el tercer solicitante este capacitado para el empleo, y un modelo adecuado para este problema sería la distribución geométrica, ya que en nuestro caso el proceso se va repetir hasta la obtención del resultado deseado. Y la probabilidad de esta distribución se calcula:
 $$P(X = x) = p(1 - p)^{x}$$
 Ahora definimos nuestras variables:\\
 $p = 0.30$ (Probabilidad de que  un solicitante este capacitado para el empleo.)\\
@@ -129,14 +133,15 @@ $$P(X = 2) = (0.30)(0.70)^{2} = \dfrac{147}{1000}$$
 b) La probabilidad de que se requiera más de dos entrevistas para cubrir el puesto.
 \end{problem}
 \subsection*{Solución}
-La probabilidad que nos pide el inciso es $P(X > 1)$, esto lo podríamos ver como:
+En este problema podemos ver que nos piden la probabilidad de que el trabajo sea cubierto con más de dos entrevistas, es decir nos piden la probabilidad de que el proceso se repita más de dos veces hasta obtener nuestro resultado deseado, en este caso nuestro "éxito" que es que el solicitante este capacitado para el empleo, y un modelo adecuado para este problema sería la distribución geométrica, ya que en nuestro caso el proceso se va repetir hasta la obtención del resultado deseado. Y la probabilidad de esta distribución se calcula:
+$$P(X = x) = p(1 - p)^{x}$$
+Ahora bien, la probabilidad que nos pide el inciso es $P(X > 1)$, esto lo podríamos ver como:
 $$P(X > 1) = 1 - P(X \leq 1) = 1 - [P(X = 1) + P(X=0)]$$
 Ahora definimos nuestras variables:\\
 $p = 0.30$ (Probabilidad de que  un solicitante este capacitado para el empleo.)\\
 $x = 0,1$ (Número de solicitantes que no estaban capacitados para el empleo.)\\
 Así que la probabilidad sería igual a:
 $$P(X > 1) = 1 - P(X \leq 1) = 1 - [(0.3)(0.7)^1 + (0.3)(0.7)^0] = \dfrac{49}{100}$$
-\newpage
 \begin{problem} 
 c) El número esperado de entrevistas para ocupar el puesto.
 \end{problem}
@@ -145,6 +150,7 @@ Sabemos que la esperanza para una variable geométrica es:
 $$E[X] = \dfrac{1 - p}{p}$$
 En nuestro caso $P = 0.30$, así que la esperanza es:
 $$E[X] = \dfrac{1 - 0.30}{0.30} = \dfrac{7}{3}$$
+\newpage
 \begin{problem}
 d) La varianza del número esperado de entrevistas realizadas.
 \end{problem}
@@ -152,7 +158,7 @@ d) La varianza del número esperado de entrevistas realizadas.
 Sabemos que la varianza para una variable geométrica es:
 $$Var(X) = \dfrac{1 - p}{p^2}$$
 En nuestro caso $P = 0.30$, así que la varianza es:
-$$E[X] = \dfrac{1 - 0.30}{(0.30)^2} = \dfrac{70}{9}$$
+$$Var(X) = \dfrac{1 - 0.30}{(0.30)^2} = \dfrac{70}{9}$$
 
 
 
@@ -168,7 +174,8 @@ a) La probabilidad de que se tengan que examinar a diez trabajadores para enviar
 grupo al hospital.
 \end{problem}
 \subsection*{Solución}
-Para sacar esta probabilidad vamos a recurrir a la variable binomial negativa, y la probabilidad de esta se calcula:
+En este problema podemos ver que nos piden la probabilidad de que se tenga que examinar a 10 trabajadores para mandar al primer grupo al hospital es decir que se haya detectado 3 trabajadores con indicios de asbesto en sus pulmones,  es decir que la prueba se va repetir 10 veces (número de trabajadores a examinar), hasta conseguir el número determinado de trabajadores con indicios de asbesto en los pulmones, este proceso es un modelo adecuado para la distribución binomial negativa, ya que cumple con todas las características de esta misma variable. \\
+Y la probabilidad de esta distribución se calcula mediante:
 $$P(X = x)=\displaystyle\binom{r + x - 1}{x} p^r (1 - p)^x$$
 Ahora definimos nuestras variables:\\
 $p = 0.40$ (Probabilidad de que un trabajador sea detectado con indicios de asbesto en los pulmones.)\\
@@ -177,12 +184,13 @@ $x = 7$ (Número de trabajadores que no mostraron indicios de asbesto en los pulm
 Por lo que nuestra probabilidad nos queda cómo:
 $$P(X = 7) = \displaystyle\binom{9}{7} (0.4)^3 (0.6)^7 \approx 0.0644972544$$
 
-\newpage
+
 \begin{problem}
 b) La probabilidad de que se tenga que examinar más de cuatro trabajadores para enviar al grupo al hospital.
 \end{problem}
 \subsection*{Solución}
-La probabilidad que nos piden es $P(X > 1)$, esta probabilidad la pudieramos ver cómo:
+En este problema podemos ver que nos piden la probabilidad de que se tenga que examinar a más de 4 trabajadores para mandar al primer grupo al hospital es decir que se haya detectado 3 trabajadores con indicios de asbesto en sus pulmones,  es decir que la prueba se va repetir más de 4 veces (número de trabajadores a examinar), hasta conseguir el número determinado de trabajadores con indicios de asbesto en los pulmones, este proceso es un modelo adecuado para la distribución binomial negativa, ya que cumple con todas las características de esta misma variable.\\
+En pocas palabras la probabilidad que nos piden es $P(X > 1)$, esta probabilidad la pudieramos ver cómo:
 $$P(X > 1) = 1 - P(X \leq 1) = 1 - [P(X = 1) + P(X = 0)]$$
 Ahora definimos nuestras variables:\\
 $p = 0.40$\\
@@ -220,9 +228,10 @@ defectuoso. Se sabe que en cada lote se tienen en promedio cuatro artículos defe
 a) La probabilidad de que el lote sea rechazado.
 \end{problem}
 \subsection*{Solución}
-El inciso nos pide la probabilidad de que la muestra de cinco artículos haya más de un artículo defectuoso, para calcular esta probabilidad vamos a recurrir a las variables hipergeométricas, y su probabilidad de esta son:
+En este problema podemos apreciar que se seleccionan de manera aleatoria 5 artículos para hacer muestreo de un lote de 20 artículos sin reemplazo, estos artículos pueden estar defectuosos que para el caso de este problema será nuestro "éxito", o que no estén defectuosos que será nuestro "no éxito", y como estamos buscando la probabilidad de que el lote sea rechazado estamos buscando cierto número de "éxitos" en nuestra muestra, por lo que para calcular esta probabilidad podemos utilizar la distribución hipergeométrica, ya que cumple con todas las condiciones para que la variable tenga una distribución hipergeométrica. \\
+Y su probabilidad de esta es:
 $$P(X = x) \dfrac{\displaystyle\binom{K}{x} \displaystyle\binom{N - K}{n - x}}{\displaystyle\binom{N}{n}}$$
-Así que la probabilidad de que estamos buscando la podríamos ver cómo:
+Así que la probabilidad que estamos buscando es que la muestra tenga 2 o más artículos defectuosos y esto lo podríamos ver cómo:
 $$P ( X \geq 2)= P(X = 2) + P(X = 3) + P(X =4)$$
 Ahora definimos nuestras variables:\\
 $N = 20$ (Número total de artículos.)\\
@@ -256,14 +265,15 @@ $$Var(X) = 5 \dfrac{4}{20} \dfrac{16}{20}  \dfrac{15}{19} = \dfrac{12}{19}$$
 c) La probabilidad de que el lote sea rechazado si la muestra es de tamaño 6.
 \end{problem}
 \subsection*{Solución}
+En este problema podemos apreciar que se seleccionan de manera aleatoria 6 artículos para hacer muestreo de un lote de 20 artículos sin reemplazo, estos artículos pueden estar defectuosos que para el caso de este problema será nuestro "éxito", o que no estén defectuosos que será nuestro "no éxito", y como estamos buscando la probabilidad de que el lote sea rechazado estamos buscando cierto número de "éxitos", en nuestra muestra, por lo que para calcular esta probabilidad podemos utilizar la distribución hipergeométrica, ya que cumple con todas las condiciones para que la variable tenga una distribución hipergeométrica.\\
 Este problema se soluciona como en el primer caso, pero aquí cambia nuestro valor de $n$.
 De igual forma la probabilidad de que estamos buscando es:
 $$P ( X \geq 2)= P(X = 2) + P(X = 3) + P(X =4)$$
 Definimos nuestras variables:\\
-$N = 20$\\
-$K = 4$\\
-$n = 6$\\
-$x = 2 , 3 ,4$\\
+$N = 20$ (Número total de artículos.)\\
+$K = 4$ (Número de artículos defectuosos)\\
+$n = 6$ (Tamaño del muestreo)\\
+$x = 2 , 3 ,4$ (Número de artículos defectuosos de la muestra.)\\
 Así que nuestra probabilidad nos quedaría:
 $$P ( X \geq 2)=\dfrac{\displaystyle\binom{4}{2} \displaystyle\binom{16}{4}}{\displaystyle\binom{20}{6}} + \dfrac{\displaystyle\binom{4}{3} \displaystyle\binom{16}{3}}{\displaystyle\binom{20}{6}} + \dfrac{\displaystyle\binom{4}{4} \displaystyle\binom{16}{2}}{\displaystyle\binom{20}{6}} = \dfrac{332}{969} $$
 
@@ -282,7 +292,6 @@ Cómo sabemos que $0! = 1$ y que cualquier número elevado a la 0 es 1, nos queda 
 $$P(X = 0) = e^{-\lambda} = 0.08$$
 De aquí podemos calcular el logaritmo natural, para buscar el valor de $\lambda$, así que:
 $$-\lambda = ln(0.08) \Rightarrow \lambda = - ln(0.08)$$
-\newpage
 \begin{problem}
 b) La probabilidad de que se tengan cuando mucho dos visitas en una hora.
 \end{problem}
@@ -303,9 +312,10 @@ $$P(X > 3) = 1 - [P(X =3) + P(X = 2) + P(X =1) + P(X = 0)]$$
 Y como sabemos que la probabilidad de una variable Poisson se calcula mediante:
 $$P(X = x) = \dfrac{e^{-\lambda} \cdot \lambda^x}{x!}$$
 Así que nuestra probabilidad nos quedaría:\\
-$P(X > 3) = 1 - [ \dfrac{e^{ln(0.08)} \cdot -5ln(0.08)^3}{3!} +  \dfrac{e^{ln(0.08)} \cdot  -5ln(0.08)^2}{2!}+ \dfrac{e^{ln(0.08)} \cdot  -5ln(0.08)^1}{1!} + \dfrac{e^{ln(0.08)} \cdot  -5ln(0.08)^0}{0!}]$\\
+$P(X > 3) = 1 - [ \dfrac{e^{5ln(0.08)} \cdot -5ln(0.08)^3}{3!} +  \dfrac{e^{5ln(0.08)} \cdot  -5ln(0.08)^2}{2!}+ \dfrac{e^{5ln(0.08)} \cdot  -5ln(0.08)^1}{1!} + \dfrac{e^{5ln(0.08)} \cdot  -5ln(0.08)^0}{0!}]$\\
 Esto es igual a:
 $$P(X > 3) \approx 0.9999832642$$
+\newpage
 \begin{problem}
 d)El número esperado y la varianza del número de visitas en una jornada de 8 horas.
 \end{problem}
