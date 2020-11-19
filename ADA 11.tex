@@ -121,7 +121,7 @@ a) La probabilidad de que el trabajo sea cubierto con el tercer solicitante.
 \end{problem}
 \subsection*{Solución}
 
-En este problema podemos ver que nos piden la probabilidad de que el trabajo sea cubierto con el tercer solicitante, es decir nos piden la probabilidad de que el proceso se repita 3 veces hasta obtener nuestro resultado deseado, en este caso nuestro "éxito" es que el tercer solicitante este capacitado para el empleo, y un modelo adecuado para este problema sería la distribución geométrica, ya que en nuestro caso el proceso se va repetir hasta la obtención del resultado deseado. Y la probabilidad de esta distribución se calcula:
+En este problema podemos ver que nos piden la probabilidad de que el trabajo sea cubierto con el tercer solicitante, es decir nos piden la probabilidad de que el proceso se repita 3 veces hasta obtener nuestro resultado deseado, en este caso nuestro "éxito", es que el tercer solicitante este capacitado para el empleo, y un modelo adecuado para este problema sería la distribución geométrica, ya que en nuestro caso el proceso se va repetir hasta la obtención del resultado deseado. Y la probabilidad de esta distribución se calcula:
 $$P(X = x) = p(1 - p)^{x}$$
 Ahora definimos nuestras variables:\\
 $p = 0.30$ (Probabilidad de que  un solicitante este capacitado para el empleo.)\\
@@ -133,7 +133,7 @@ $$P(X = 2) = (0.30)(0.70)^{2} = \dfrac{147}{1000}$$
 b) La probabilidad de que se requiera más de dos entrevistas para cubrir el puesto.
 \end{problem}
 \subsection*{Solución}
-En este problema podemos ver que nos piden la probabilidad de que el trabajo sea cubierto con más de dos entrevistas, es decir nos piden la probabilidad de que el proceso se repita más de dos veces hasta obtener nuestro resultado deseado, en este caso nuestro "éxito" que es que el solicitante este capacitado para el empleo, y un modelo adecuado para este problema sería la distribución geométrica, ya que en nuestro caso el proceso se va repetir hasta la obtención del resultado deseado. Y la probabilidad de esta distribución se calcula:
+En este problema podemos ver que nos piden la probabilidad de que el trabajo sea cubierto con más de dos entrevistas, es decir nos piden la probabilidad de que el proceso se repita más de dos veces hasta obtener nuestro resultado deseado, en este caso nuestro "éxito", es que el solicitante este capacitado para el empleo, y un modelo adecuado para este problema sería la distribución geométrica, ya que en nuestro caso el proceso se va repetir hasta la obtención del resultado deseado. Y la probabilidad de esta distribución se calcula:
 $$P(X = x) = p(1 - p)^{x}$$
 Ahora bien, la probabilidad que nos pide el inciso es $P(X > 1)$, esto lo podríamos ver como:
 $$P(X > 1) = 1 - P(X \leq 1) = 1 - [P(X = 1) + P(X=0)]$$
@@ -142,6 +142,7 @@ $p = 0.30$ (Probabilidad de que  un solicitante este capacitado para el empleo.)
 $x = 0,1$ (Número de solicitantes que no estaban capacitados para el empleo.)\\
 Así que la probabilidad sería igual a:
 $$P(X > 1) = 1 - P(X \leq 1) = 1 - [(0.3)(0.7)^1 + (0.3)(0.7)^0] = \dfrac{49}{100}$$
+\newpage
 \begin{problem} 
 c) El número esperado de entrevistas para ocupar el puesto.
 \end{problem}
@@ -150,7 +151,6 @@ Sabemos que la esperanza para una variable geométrica es:
 $$E[X] = \dfrac{1 - p}{p}$$
 En nuestro caso $P = 0.30$, así que la esperanza es:
 $$E[X] = \dfrac{1 - 0.30}{0.30} = \dfrac{7}{3}$$
-\newpage
 \begin{problem}
 d) La varianza del número esperado de entrevistas realizadas.
 \end{problem}
@@ -184,7 +184,7 @@ $x = 7$ (Número de trabajadores que no mostraron indicios de asbesto en los pulm
 Por lo que nuestra probabilidad nos queda cómo:
 $$P(X = 7) = \displaystyle\binom{9}{7} (0.4)^3 (0.6)^7 \approx 0.0644972544$$
 
-
+\newpage
 \begin{problem}
 b) La probabilidad de que se tenga que examinar más de cuatro trabajadores para enviar al grupo al hospital.
 \end{problem}
@@ -228,7 +228,7 @@ defectuoso. Se sabe que en cada lote se tienen en promedio cuatro artículos defe
 a) La probabilidad de que el lote sea rechazado.
 \end{problem}
 \subsection*{Solución}
-En este problema podemos apreciar que se seleccionan de manera aleatoria 5 artículos para hacer muestreo de un lote de 20 artículos sin reemplazo, estos artículos pueden estar defectuosos que para el caso de este problema será nuestro "éxito", o que no estén defectuosos que será nuestro "no éxito", y como estamos buscando la probabilidad de que el lote sea rechazado estamos buscando cierto número de "éxitos" en nuestra muestra, por lo que para calcular esta probabilidad podemos utilizar la distribución hipergeométrica, ya que cumple con todas las condiciones para que la variable tenga una distribución hipergeométrica. \\
+En este problema podemos apreciar que se seleccionan de manera aleatoria 5 artículos para hacer muestreo de un lote de 20 artículos sin reemplazo, estos artículos pueden estar defectuosos que para el caso de este problema será nuestro "éxito", o que no estén defectuosos que será nuestro "no éxito", y como estamos buscando la probabilidad de que el lote sea rechazado estamos buscando cierto número de "éxitos" (en nuestra muestra), por lo que para calcular esta probabilidad podemos utilizar la distribución hipergeométrica, ya que cumple con todas las condiciones para que la variable tenga una distribución hipergeométrica. \\
 Y su probabilidad de esta es:
 $$P(X = x) \dfrac{\displaystyle\binom{K}{x} \displaystyle\binom{N - K}{n - x}}{\displaystyle\binom{N}{n}}$$
 Así que la probabilidad que estamos buscando es que la muestra tenga 2 o más artículos defectuosos y esto lo podríamos ver cómo:
@@ -304,33 +304,36 @@ $$P ( X \leq 2) = \dfrac{e^{ln(0.08)} \cdot (-ln(0.08))^2}{2!} + \dfrac{e^{ln(0.
 c) La probabilidad de que en cinco horas hayan visitado más de tres personas.
 \end{problem}
 \subsubsection*{Solución}
-$$X \sim Poisson (-5ln(0.08))$$
+Lo podemos escribir como:
+$$X \sim Poisson(-5ln(0.08))$$
+Porque el intervalo es cinco veces mas grande y $\lambda$ es directamente propocional.\\
 La probabilidad que nos piden es $P(X > 3)$, esto lo podríamos ver cómo:
 $$P(X > 3) = 1 - P(X \leq 3)$$
-Esto lo podríamos ver cómo:
+Esto a la vez podríamos verlo cómo:
 $$P(X > 3) = 1 - [P(X =3) + P(X = 2) + P(X =1) + P(X = 0)]$$
 Y como sabemos que la probabilidad de una variable Poisson se calcula mediante:
 $$P(X = x) = \dfrac{e^{-\lambda} \cdot \lambda^x}{x!}$$
 Así que nuestra probabilidad nos quedaría:\\
 $P(X > 3) = 1 - [ \dfrac{e^{5ln(0.08)} \cdot -5ln(0.08)^3}{3!} +  \dfrac{e^{5ln(0.08)} \cdot  -5ln(0.08)^2}{2!}+ \dfrac{e^{5ln(0.08)} \cdot  -5ln(0.08)^1}{1!} + \dfrac{e^{5ln(0.08)} \cdot  -5ln(0.08)^0}{0!}]$\\
 Esto es igual a:
-$$P(X > 3) \approx 0.9999832642$$
+$$P(X > 3) \approx 0.9999636034$$
 \newpage
 \begin{problem}
 d)El número esperado y la varianza del número de visitas en una jornada de 8 horas.
 \end{problem}
 \subsubsection*{Solución}
+Lo podemos escribir como:
+$$X \sim Poisson(-8ln(0.08))$$
+Porque el intervalo es ocho veces mas grande y $\lambda$ es directamente propocional.\\
 Sabemos que la esperanza de una variable de Poisson se calcula mediante:
 $$E[X] = \lambda$$
-Para una hora sería:
-$$E[X] = -ln(0.08)$$
-Pero para 8 horas sería:
+Y como sabemos que nuestra $\lambda = -8ln(0.08)$.
+La esperanza para 8 horas sería:\\
 $$E[X] = -8 ln(0.08)$$
 
 En el caso de la varianza de una variable de Poisson se calcula mediante:
 $$Var(X) = \lambda$$
-Para una hora sería:
-$$Var(X) = -ln(0.08)$$
-Pero para 8 horas sería:
+Y como sabemos que nuestra $\lambda = -8ln(0.08)$.\\
+La varianza para 8 horas sería:
 $$Var(X) = -8 ln(0.08)$$ 
 \end{document}
